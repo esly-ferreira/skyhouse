@@ -58,16 +58,16 @@
   }
   .divisao p {
     padding-top: 32px;
-    font-size: 12px;
+    font-size: 16px;
   }
   .numeros p {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 480px) {
   .divisao h1 {
-    font-size: 32px;
+    font-size: 36px;
     letter-spacing: -4px;
     line-height: 20%;
   }

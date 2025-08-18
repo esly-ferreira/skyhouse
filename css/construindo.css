@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 
-.construindo-casas img{
+.construindo-casas img {
   border-radius: 24px;
   width: 100%;
 }
@@ -43,4 +43,50 @@
   display: inline-block;
   border-bottom: 1px solid var(--cinza);
   padding-bottom: 4px;
+}
+
+@media (max-width: 960px) {
+  .divisao {
+    margin-top: 56px;
+    margin-bottom: 32px;
+    grid-template-columns: 1fr;
+  }
+  .divisao h1 {
+    font-size: 64px;
+    line-height: 50%;
+    letter-spacing: -8;
+  }
+  .divisao p {
+    padding-top: 32px;
+    font-size: 12px;
+  }
+  .numeros p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .divisao h1 {
+    font-size: 32px;
+    letter-spacing: -4px;
+    line-height: 20%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .divisao h1 {
+    font-size: 52px;
+    line-height: 50%;
+    letter-spacing: -8;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .divisao {
+    margin-top: 56px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1900px) {
 }

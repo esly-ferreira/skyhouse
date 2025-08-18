@@ -23,11 +23,12 @@
 @media (max-width: 480px) {
   .numeros {
     grid-template-columns: 1fr 1fr;
+    padding-top: 64;
   }
   .numeros h1 {
     font-size: 48px;
   }
-    .numeros p{
+  .numeros p {
     padding-bottom: 44px;
   }
 }
@@ -35,11 +36,12 @@
 @media (min-width: 481px) and (max-width: 768px) {
   .numeros {
     grid-template-columns: 1fr 1fr;
+    padding-top: 64;
   }
   .numeros h1 {
     font-size: 64px;
   }
-  .numeros p{
+  .numeros p {
     padding-bottom: 54px;
   }
 }
@@ -47,5 +49,6 @@
 @media (min-width: 769px) and (max-width: 1200px) {
   .numeros {
     grid-template-columns: 1fr 1fr;
+    padding-top: 64;
   }
 }

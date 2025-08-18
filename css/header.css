@@ -1,24 +1,21 @@
 header {
   position: relative;
-  z-index: 9999;
+  z-index: 10;
 }
 
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  position: relative;
   max-width: 100%;
   margin: 0 auto;
-  padding: 16px;
+  padding: 32px;
 }
 
-.bt-ctt {
-  background: rgba(0, 0, 0, 0.378);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(14.4px);
-  -webkit-backdrop-filter: blur(14.4px);
-  padding: 19px 50px;
-  border-radius: 16px;
+.logo {
+  position: absolute; /* fixa logo à esquerda */
+  left: 16px;
 }
 
 .nav-links {
@@ -56,7 +53,6 @@ header {
     flex-direction: column;
     gap: 34px;
     padding: 20px;
-    width: 300px;
     display: none;
     z-index: 200;
     border-radius: 16px;
@@ -66,9 +62,12 @@ header {
   }
 
   .nav-links.active {
-    display: flex; /* aparece quando clica */
+    display: flex;
   }
   .logo img {
     width: 20px;
+  }
+  .nav {
+    padding: 16px;
   }
 }

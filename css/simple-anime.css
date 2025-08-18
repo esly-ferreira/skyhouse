@@ -2,7 +2,7 @@
   transform: translate3d(0, -20px, 0);
 }
 .fadeInUp {
-  transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 200px, 0);
 }
 .fadeInRight {
   transform: translate3d(20px, 0, 0);

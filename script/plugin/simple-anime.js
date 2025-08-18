@@ -1,1 +1,31 @@
-window.SimpleAnime=class{constructor(){this.items=document.querySelectorAll("[data-anime]"),this.init()}animateItems(){this.items.forEach(t=>{const e=Number(t.getAttribute("data-anime"));isNaN(e)||setTimeout(()=>{t.classList.add("anime")},e)})}handleVisibility(){void 0!==document.visibilityState?"visible"===document.visibilityState&&this.animateItems():this.animateItems()}init(){this.handleVisibility=this.handleVisibility.bind(this),this.handleVisibility(),document.addEventListener("visibilitychange",this.handleVisibility)}}
+window.SimpleAnime = class {
+  constructor() {
+    this.items = document.querySelectorAll("[data-anime]");
+    this.init();
+  }
+
+  animateItem(item) {
+    const delay = Number(item.getAttribute("data-anime"));
+    if (!isNaN(delay)) {
+      setTimeout(() => item.classList.add("anime"), delay);
+    } else {
+      item.classList.add("anime");
+    }
+  }
+
+  init() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.animateItem(entry.target); // entra na tela → anima
+        } else {
+          entry.target.classList.remove("anime"); // sai da tela → reseta
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    this.items.forEach(item => observer.observe(item));
+  }
+};

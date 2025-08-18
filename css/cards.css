@@ -1,0 +1,104 @@
+.cards {
+  position: relative;
+  max-width: 1664px;
+  height: 600px;
+  margin: 0 auto;
+  cursor: default;
+}
+
+.card-1,
+.card-2 {
+  position: absolute;
+  width: 400px;
+  padding: 32px 24px 24px 24px;
+  border-radius: 0 16px;
+  background: rgba(0, 0, 0, 0.378);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14.4px);
+  -webkit-backdrop-filter: blur(14.4px);
+  margin: 20px;
+}
+
+.card-1 {
+  left: 0;
+  top: 50px;
+}
+
+.card-2 {
+  right: 0;
+  top: 450px;
+}
+
+.div-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding-bottom: 24px;
+}
+
+.div-card img {
+  width: 44px;
+}
+
+.card-texto {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .card-2 {
+    top: 270px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .card-2 {
+    top: 270px;
+    padding: 12;
+    font-size: 10px;
+    width: 200px;
+  }
+  .card-2 .div-card,
+  .card-1 .div-card {
+    padding-bottom: 12px;
+  }
+  .card-1 {
+    padding: 12px;
+    font-size: 16px;
+    width: 245px;
+  }
+  .card-2 p,
+  .card-1 p {
+    font-size: 12px;
+  }
+  .div-card img {
+    width: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-2 {
+    top: 250px;
+    padding: 12;
+    font-size: 10px;
+    width: 200px;
+  }
+  .card-1 {
+    top: 100px;
+  }
+  .card-2 .div-card,
+  .card-1 .div-card {
+    padding-bottom: 12px;
+  }
+  .card-1 {
+    padding: 12px;
+    font-size: 10px;
+    width: 245px;
+  }
+  .div-card img {
+    width: 30px;
+  }
+  .card-2 p,
+  .card-1 p {
+    font-size: 12px;
+  }
+}

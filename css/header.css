@@ -1,0 +1,74 @@
+header {
+  position: relative;
+  z-index: 9999;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.bt-ctt {
+  background: rgba(0, 0, 0, 0.378);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14.4px);
+  -webkit-backdrop-filter: blur(14.4px);
+  padding: 19px 50px;
+  border-radius: 16px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 80px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 960px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.378);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(14.4px);
+    -webkit-backdrop-filter: blur(14.4px);
+    flex-direction: column;
+    gap: 34px;
+    padding: 20px;
+    width: 300px;
+    display: none;
+    z-index: 200;
+    border-radius: 16px;
+    margin-right: 20px;
+    align-items: center;
+    padding-bottom: 32px;
+  }
+
+  .nav-links.active {
+    display: flex; /* aparece quando clica */
+  }
+  .logo img {
+    width: 20px;
+  }
+}

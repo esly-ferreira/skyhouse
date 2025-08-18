@@ -1,0 +1,51 @@
+.numeros {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-top: 92px;
+  place-items: center;
+}
+
+.numeros h1 {
+  font-family: "K2D", sans-serif;
+  color: var(--preto);
+  font-size: 96px;
+  text-align: center;
+}
+
+.numeros p {
+  font-family: "Quicksand", sans-serif;
+  color: var(--preto);
+  font-size: 20px;
+  font-weight: 100;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .numeros {
+    grid-template-columns: 1fr 1fr;
+  }
+  .numeros h1 {
+    font-size: 48px;
+  }
+    .numeros p{
+    padding-bottom: 44px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .numeros {
+    grid-template-columns: 1fr 1fr;
+  }
+  .numeros h1 {
+    font-size: 64px;
+  }
+  .numeros p{
+    padding-bottom: 54px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .numeros {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -85,10 +85,8 @@ const animateCounter = (el) => {
       : isPlus
       ? "+" + current
       : "+" + current;
-  }, Math.floor(Math.random() * 50) + 20); // intervalos aleatórios para terminar em tempos diferentes
+  }, Math.floor(Math.random() * 50) + 20);
 };
-
-// Observer para disparar quando qualquer contador aparecer na tela
 const observer = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach((entry) => {
@@ -102,3 +100,16 @@ const observer = new IntersectionObserver(
 );
 
 counters.forEach((counter) => observer.observe(counter));
+
+//animção scrol ------------------------------------------------
+  const carrossel = document.querySelector('.carrossel-container');
+  const prev = document.querySelector('.prev');
+  const next = document.querySelector('.next');
+
+  next.addEventListener('click', () => {
+    carrossel.scrollBy({ left: carrossel.clientWidth, behavior: 'smooth' });
+  });
+
+  prev.addEventListener('click', () => {
+    carrossel.scrollBy({ left: -carrossel.clientWidth, behavior: 'smooth' });
+  });

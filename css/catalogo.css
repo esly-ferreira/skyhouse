@@ -1,0 +1,145 @@
+.catalogo {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carrossel-container {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carrossel-container > div {
+  flex: 0 0 80%; /* ocupa 80% da tela no desktop */
+  scroll-snap-align: start;
+}
+
+@media (min-width: 768px) {
+  .carrossel-container > div {
+    flex: 0 0 calc(33.333% - 24px); /* 3 cards por vez */
+  }
+}
+
+.casa1,
+.casa2,
+.casa3,
+.casa4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 600px;
+  border-radius: 16px;
+  padding: 24px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.casa1 {
+  background-image: url(../imgs/catalogo/casa-1.webp);
+}
+.casa2 {
+  background-image: url(../imgs/catalogo/casa-2.webp);
+}
+.casa3 {
+  background-image: url(../imgs/catalogo/casa-3.webp);
+}
+.casa4 {
+  background-image: url(../imgs/imagem-meio.webp);
+}
+
+.card-casa {
+  width: 100%;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(14.4px);
+  padding: 20px;
+  color: var(--branco);
+}
+
+.card-casa h1 {
+  font-family: "Quicksand", sans-serif;
+  color: var(--branco);
+  padding-bottom: 12px;
+}
+
+.card-casa p {
+  font-family: "Quicksand", sans-serif;
+  color: var(--branco);
+  font-weight: 100;
+  padding-bottom: 12px;
+}
+
+.mais-detalhes {
+  background-color: var(--bege);
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 12px;
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  color: var(--branco);
+  transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+.mais-detalhes:hover,
+.botoes button:hover {
+  background-color: var(--begeclaro);
+  transform: scale(1.05);
+}
+
+.caixa-botao {
+  margin-top: 32px;
+}
+
+.botoes {
+  max-width: 480px;
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 0 auto;
+}
+
+.botoes button {
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  margin: 0 auto;
+  border: none;
+  background-color: var(--bege);
+  color: white;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+.carrossel-container::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .casa1,
+  .casa2,
+  .casa3,
+  .casa4 {
+    height: 400px;
+    padding: 12px;
+  }
+  .card-casa {
+    padding: 16px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+}
+
+@media (min-width: 1201px) and (max-width: 1900px) {
+}

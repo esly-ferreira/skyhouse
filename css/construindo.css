@@ -45,6 +45,33 @@
   padding-bottom: 4px;
 }
 
+.botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botao-fale-conosco {
+  margin-top: 64px;
+  font-weight: 100;
+  font-size: 20px;
+  background-color: var(--bege);
+  display: block;
+  text-align: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  color: var(--branco);
+  transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+.botao-fale-conosco:hover{
+  background-color: var(--begeclaro);
+  transform: scale(1.05);
+}
+
+
 @media (max-width: 960px) {
   .divisao {
     margin-top: 56px;
@@ -69,7 +96,7 @@
   .divisao h1 {
     font-size: 36px;
     letter-spacing: -4px;
-    line-height: 20%;
+    line-height: 25%;
   }
 }
 

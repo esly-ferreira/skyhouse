@@ -11,25 +11,24 @@
 
 <body>
 
-  <section class="bg">
-    <header class="fadeInDown" data-anime="400">
-      <nav class="nav">
-        <div class="logo">
-          <img src="./imgs/esly-icon.svg" alt="">
-        </div>
+<section class="bg" <header class="fadeInDown" data-anime="400">
+    <nav class="nav">
+      <div class="logo">
+        <img src="./imgs/esly-icon.svg" alt="">
+      </div>
 
-        <button class="hamburger" id="hamburger">
-          ☰
-        </button>
+      <button class="hamburger" id="hamburger">
+        ☰
+      </button>
 
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Sobre nós</a></li>
-          <li><a href="#">Catálogo de Projetos</a></li>
-          <li><a href="#">Reviews</a></li>
-          <li><a href="#" class="bt-ctt">Entre em contato</a></li>
-        </ul>
-      </nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="#">Catálogo de Projetos</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#" class="bt-ctt">Entre em contato</a></li>
+      </ul>
+    </nav>
     </header>
 
 
@@ -61,7 +60,7 @@
     </div>
   </section>
 
-  <section class="max">
+  <section id="sobre" class="max">
     <div class="margin-linhas">
       <div class="linhas">
 
@@ -92,18 +91,75 @@
             <p class="texto-sublinhado fadeInleft" data-anime="600">Transformamos projetos em construções sólidas, unindo design, funcionalidade e qualidade em cada detalhe.</p>
           </div>
           <img class="fadeInleft" src="./imgs/imagem-meio.webp" alt="" data-anime="300">
-          <div class="botao">
-            <a href="">Fale conosco</a>
-          </div>
         </div>
+
+        <div class="botao">
+          <a class='botao-fale-conosco fadeInLeft' data-anime="600" href="">Fale conosco</a>
+        </div>
+
+        <section>
+          <div class="construindo-casas">
+            <div class="divisao">
+              <h1 class="font1 fadeInRight" data-anime="600">Catalogo</h1><br>
+              <h1 class="font2 fadeInRight" data-anime="700">projetos</h1>
+              </h1>
+              <p class="texto-sublinhado fadeInRight" data-anime="600">Somos especializados em construir espaços que unem design, funcionalidade e atenção máxima aos detalhes.</p>
+            </div>
+          </div>
+
+          <div class="catalogo">
+            <div class="carrossel-container">
+              <div class="casa1 fadeInDown" data-anime="400">
+                <div class="card-casa">
+                  <h1>Luxury Modern Villa</h1>
+                  <p>Localização: Miami, USA</p>
+                  <p>Preço: 4,500,000€</p>
+                  <a class="mais-detalhes" href="">Mais detalhes</a>
+                </div>
+              </div>
+
+              <div class="casa2 fadeInDown" data-anime="500">
+                <div class="card-casa">
+                  <h1>Luxury Modern Villa</h1>
+                  <p>Localização: Dubai, UAE</p>
+                  <p>Preço: 7,200,000€</p>
+                  <a class="mais-detalhes" href="">Mais detalhes</a>
+                </div>
+              </div>
+
+              <div class="casa3 fadeInDown" data-anime="600">
+                <div class="card-casa">
+                  <h1>Luxury Modern Villa</h1>
+                  <p>Localização: London, UK</p>
+                  <p>Preço: 6,800,000€</p>
+                  <a class="mais-detalhes" href="">Mais detalhes</a>
+                </div>
+              </div>
+
+              <div class="casa4 fadeInDown" data-anime="100">
+                <div class="card-casa">
+                  <h1>Luxury Modern Villa</h1>
+                  <p>Localização: London, UK</p>
+                  <p>Preço: 6,800,000€</p>
+                  <a class="mais-detalhes" href="">Mais detalhes</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="caixa-botao">
+              <div class="botoes">
+                <button class="navegacao prev fadeInRight" data-anime="600">&#10094;</button>
+                <button class="navegacao next fadeInleft" data-anime="600">&#10095;</button>
+              </div>
+            </div>
+          </div>
+
 
 
       </div>
-    </div>
-    </div>
 
-
-
+  </section>
+  </div>
   </section>
 
   <script src="./script/plugin/simple-anime.js"></script>

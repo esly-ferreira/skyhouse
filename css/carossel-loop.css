@@ -16,9 +16,9 @@
   scroll-behavior: smooth;
   width: 100%;
   height: 320px;
-    padding-top: 20px; /* espaço acima da barra de rolagem */
-  padding-bottom: 20px; /* espaço abaixo da barra de rolagem */
-  box-sizing: border-box; /* garante que o padding não quebre o layout */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
 }
 
 .slide {
@@ -61,12 +61,17 @@
   font-family: "Quicksand", sans-serif;
   color: var(--branco);
   padding-bottom: 12px;
-  font-size: 14px;
+  font-size: 16px;
   opacity: 0;
   transition: opacity 0.5s ease;
+  border-radius: 10px;
 
   /* Degradê sutil transparente para preto */
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 20%, rgba(0,0,0,0.1) 80%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 30%,
+    rgba(0, 0, 0, 0.1) 80%
+  );
 }
 
 .slide.active .legenda {
@@ -84,25 +89,25 @@
     height: 160px;
   }
   .slide .legenda {
-    font-size: 12px;
-    padding: 3px 8px;
+    font-size: 16px;
+    padding: 8px;
   }
   .scroll-container {
-    height: 160px;
+    height: 205px;
   }
 }
 
 @media (max-width: 480px) {
   .slide {
     width: 100px;
-    height: 70px;
+    height: 120px;
   }
   .slide.active {
     width: 200px;
-    height: 140px;
+    height: 160px;
   }
   .slide .legenda {
-    font-size: 10px;
+    font-size: 14px;
     padding: 2px 6px;
   }
 }

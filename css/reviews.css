@@ -1,6 +1,6 @@
 .reviews{
   background-color: var(--pretoescuro);
-  height: 600px;
+  height: auto;
 }
 
 .divisao-sem-top {

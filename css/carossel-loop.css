@@ -1,0 +1,108 @@
+.catalogo2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.scroll-container {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: flex-end;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 320px;
+    padding-top: 20px; /* espaço acima da barra de rolagem */
+  padding-bottom: 20px; /* espaço abaixo da barra de rolagem */
+  box-sizing: border-box; /* garante que o padding não quebre o layout */
+}
+
+.slide {
+  position: relative;
+  flex: 0 0 auto;
+  width: 150px;
+  height: 100px;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.5s ease;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.slide.active {
+  width: 350px;
+  height: 240px;
+  filter: grayscale(0%);
+  opacity: 1;
+  z-index: 10;
+}
+
+.slide .legenda {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end; /* mantém o texto na base */
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  color: var(--branco);
+  padding-bottom: 12px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+
+  /* Degradê sutil transparente para preto */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 20%, rgba(0,0,0,0.1) 80%);
+}
+
+.slide.active .legenda {
+  opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .slide {
+    width: 120px;
+    height: 80px;
+  }
+  .slide.active {
+    width: 240px;
+    height: 160px;
+  }
+  .slide .legenda {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
+  .scroll-container {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide {
+    width: 100px;
+    height: 70px;
+  }
+  .slide.active {
+    width: 200px;
+    height: 140px;
+  }
+  .slide .legenda {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+}

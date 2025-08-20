@@ -113,3 +113,31 @@ counters.forEach((counter) => observer.observe(counter));
   prev.addEventListener('click', () => {
     carrossel.scrollBy({ left: -carrossel.clientWidth, behavior: 'smooth' });
   });
+
+const slides = document.querySelectorAll(".slide");
+let currentIndex = 0;
+
+function updateSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === index);
+  });
+
+  // centraliza o slide ativo
+  const container = document.querySelector(".scroll-container");
+  const activeSlide = slides[index];
+  const containerCenter = container.offsetWidth / 2;
+  const slideCenter = activeSlide.offsetLeft + activeSlide.offsetWidth / 2;
+  container.scrollLeft = slideCenter - containerCenter;
+
+  currentIndex = index;
+}
+
+// clique em uma slide para ativar
+slides.forEach((slide, i) => {
+  slide.addEventListener("click", () => {
+    updateSlide(i);
+  });
+});
+
+// inicializa centralizando o primeiro slide
+updateSlide(0);

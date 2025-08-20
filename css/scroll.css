@@ -1,0 +1,25 @@
+/* Barra de rolagem WebKit */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+/* Fundo da barra (track) */
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 6px;
+  padding-top: 200px; /* não funciona diretamente, então usamos margin interno abaixo */
+}
+
+/* Thumb (parte que se move) */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+/* Thumb ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

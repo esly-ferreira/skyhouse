@@ -1,0 +1,71 @@
+.reviews{
+  background-color: var(--pretoescuro);
+  height: 600px;
+}
+
+.divisao-sem-top {
+  padding: 20px;
+  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  align-items: center;
+  padding-top: 64px;
+}
+
+.divisao-sem-top p {
+  max-width: 300px;
+  font-family: "Quicksand", sans-serif;
+  color: var(--cinza);
+}
+
+.divisao-sem-top h1 {
+  font-family: "Ysabeau", sans-serif;
+  font-size: 64px;
+  text-transform: uppercase;
+  line-height: 0%;
+  letter-spacing: -8;
+  color: var(--branco);
+}
+
+
+@media (max-width: 960px) {
+  .divisao-sem-top{
+    margin-bottom: 32px;
+    grid-template-columns: 1fr;
+  }
+  .divisao-sem-top h1{
+    font-size: 64px;
+    line-height: 50%;
+    letter-spacing: -8;
+  }
+  .divisao-sem-top p{
+    padding-top: 32px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .divisao-sem-top h1{
+    font-size: 36px;
+    letter-spacing: -4px;
+    line-height: 16px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .divisao-sem-top h1{
+    font-size: 52px;
+    line-height: 50%;
+    letter-spacing: -8;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .divisao-sem-top{
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1900px) {
+}

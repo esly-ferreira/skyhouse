@@ -4,7 +4,7 @@
 }
 
 .construindo-casas img {
-  border-radius: 24px;
+  border-radius: 16px;
   width: 100%;
 }
 
@@ -54,7 +54,7 @@
 .botao-fale-conosco {
   margin-top: 64px;
   font-weight: 100;
-  font-size: 20px;
+  font-size: 16px;
   background-color: var(--bege);
   display: block;
   text-align: center;
@@ -66,11 +66,10 @@
   transition: background-color 0.4s ease, transform 0.3s ease;
 }
 
-.botao-fale-conosco:hover{
+.botao-fale-conosco:hover {
   background-color: var(--begeclaro);
   transform: scale(1.05);
 }
-
 
 @media (max-width: 960px) {
   .divisao {
@@ -96,7 +95,7 @@
   .divisao h1 {
     font-size: 36px;
     letter-spacing: -4px;
-    line-height: 25%;
+    line-height: 16px;
   }
 }
 

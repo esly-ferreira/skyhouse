@@ -10,7 +10,7 @@
 .scroll-container {
   display: flex;
   gap: 20px;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-end;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -109,5 +109,12 @@
   .slide .legenda {
     font-size: 14px;
     padding: 2px 6px;
+  }
+}
+
+@media (max-width: 1767px) {
+  .scroll-container {
+  justify-content: flex-start;
+
   }
 }

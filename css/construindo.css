@@ -1,20 +1,34 @@
-.construindo-casas {
+.container-principal2,
+.container-principal {
   max-width: 1140px;
   margin: 0 auto;
 }
 
-.construindo-casas img {
+.container-principal2 img,
+.container-principal img {
   border-radius: 16px;
   width: 100%;
 }
 
 .divisao {
-  display: flex;
-  margin-top: 128px;
   display: grid;
   grid-template-columns: 1fr auto;
   margin-bottom: 56px;
   align-items: center;
+  padding-top: 128px;
+}
+
+.divisao2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 56px;
+  padding-top: 128px;
+  gap: 32px;
+}
+
+.divisao2 img {
+  background-size: cover;
+  background-position: center;
 }
 
 .divisao p {
@@ -23,20 +37,28 @@
   color: var(--cinza);
 }
 
+.divisao2 h1,
 .divisao h1 {
   font-family: "Ysabeau", sans-serif;
   font-size: 64px;
   text-transform: uppercase;
-  line-height: 0%;
-  letter-spacing: -8;
+  letter-spacing: -4;
+}
+
+.divisao h1 {
+  line-height: 0px;
+}
+
+.divisao2 {
+  line-height: 50px;
 }
 
 .font1 {
-  color: var(--bege);
+  color: var(--preto);
 }
 
 .font2 {
-  color: var(--preto);
+  color: var(--bege);
 }
 
 .texto-sublinhado {
@@ -72,8 +94,9 @@
 }
 
 @media (max-width: 960px) {
+  .divisao2,
   .divisao {
-    margin-top: 56px;
+    padding-top: 56px;
     margin-bottom: 32px;
     grid-template-columns: 1fr;
   }
@@ -97,6 +120,13 @@
     letter-spacing: -4px;
     line-height: 16px;
   }
+  .divisao2 h1 {
+    font-size: 36px;
+    letter-spacing: -4px;
+    line-height: 0px;
+    margin-bottom: 32px;
+    margin-top: 32px;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
@@ -105,12 +135,25 @@
     line-height: 50%;
     letter-spacing: -8;
   }
+  .divisao2 h1 {
+    font-size: 52px;
+    line-height: 12px;
+    margin-bottom: 32px;
+    margin-top: 32px;
+    gap: 32px;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
   .divisao {
-    margin-top: 56px;
+    padding-top: 56px;
     margin-bottom: 32px;
+  }
+  .divisao2 h1 {
+    font-size: 64px;
+  }
+  .divisao2 {
+    gap: 32px;
   }
 }
 

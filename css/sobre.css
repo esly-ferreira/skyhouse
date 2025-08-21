@@ -1,0 +1,15 @@
+.grid-paragrafos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  font-family: "Quicksand", sans-serif;
+  color: var(--cinza);
+  padding: 20px;
+  line-height: 130%;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .grid-paragrafos {
+    grid-template-columns: 1fr;
+  }
+}

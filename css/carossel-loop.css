@@ -41,7 +41,7 @@
 
 .slide.active {
   width: 350px;
-  height: 240px;
+  height: auto;
   filter: grayscale(0%);
   opacity: 1;
   z-index: 10;

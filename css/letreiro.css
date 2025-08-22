@@ -1,0 +1,24 @@
+.letreiro {
+  display: grid;
+}
+
+.letreiro p {
+  font-family: "Quicksand", sans-serif;
+  color: var(--cinza);
+  text-align: center;
+  font-size: 12px;
+}
+
+.letreiro h1 {
+  text-align: center;
+  font-family: "Ysabeau", sans-serif;
+  font-size: 14vw;
+  text-transform: uppercase;
+  letter-spacing: -0.1em;
+
+  background: linear-gradient(to bottom, #ffffff, #dedede);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}

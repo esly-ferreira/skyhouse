@@ -14,7 +14,7 @@ header {
 }
 
 .logo {
-  position: absolute; /* fixa logo à esquerda */
+  position: absolute;
   left: 16px;
 }
 
@@ -27,6 +27,18 @@ header {
 .nav-links li a {
   color: white;
   text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  transition: background 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+}
+
+.nav-links li a:hover {
+  background: rgba(255, 255, 255, 0.33);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .hamburger {
@@ -34,33 +46,33 @@ header {
   font-size: 26px;
   background: none;
   border: none;
-  color: white;
+  color: var(--branco);
   cursor: pointer;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1200px) {
   .hamburger {
     display: block;
   }
   .nav-links {
     position: absolute;
     top: 70px;
-    right: 0;
-    background: rgba(0, 0, 0, 0.378);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(14.4px);
-    -webkit-backdrop-filter: blur(14.4px);
     flex-direction: column;
     gap: 34px;
-    padding: 20px;
+    padding: 32px;
     display: none;
     z-index: 200;
     border-radius: 16px;
-    margin-right: 20px;
     align-items: center;
-    padding-bottom: 32px;
+    background-color: var(--branco);
   }
-
+  .nav-links li a:hover {
+    color: var(--pretoclaro);
+  }
+  .nav-links li a {
+    background: transparent;
+    color: var(--cinza);
+  }
   .nav-links.active {
     display: flex;
   }

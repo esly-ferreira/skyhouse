@@ -1,6 +1,7 @@
 .reviews {
   background-color: var(--pretoescuro);
   height: auto;
+  background-image: url(../imgs/footer.png);
 }
 
 .divisao-sem-top {
@@ -12,7 +13,7 @@
 }
 
 .divisao-sem-top p {
-  max-width: 300px;
+  max-width: 600px;
   font-family: "Quicksand", sans-serif;
   color: var(--cinza);
 }
@@ -28,7 +29,6 @@
 
 @media (max-width: 960px) {
   .divisao-sem-top {
-    margin-bottom: 32px;
     grid-template-columns: 1fr;
   }
   .divisao-sem-top h1 {

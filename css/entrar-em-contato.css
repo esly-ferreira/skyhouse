@@ -1,0 +1,101 @@
+.entrar-em-contato {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin-top: 64px;
+  padding-bottom: 64px;
+}
+
+.entrar-em-contato img {
+  background-image: url(../imgs/foto-bg-1.webp);
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+}
+
+.inputs {
+  background-color: var(--pretoescuro);
+  border-radius: 16px;
+  display: grid;
+}
+
+.form-container {
+  display: grid;
+  place-content: center;
+  padding: 42px;
+  text-align: center;
+  font-family: "Ysabeau", sans-serif;
+  color: #fafafa;
+}
+
+.form-container h2 {
+  text-align: center;
+  font-family: "Ysabeau", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.1em;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.form-container p {
+  font-family: "Quicksand", sans-serif;
+  color: var(--cinza);
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 24px;
+  border: 2px solid #fafafa33;
+  border-radius: 12px;
+  background: transparent;
+  font-family: "Quicksand", sans-serif;
+  color: var(--cinza);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-container input::placeholder {
+  font-family: "Quicksand", sans-serif;
+  color: var(--cinza);
+}
+
+.form-container input:focus {
+  border-color: var(--branco);
+  box-shadow: 0 4px 12px rgba(250, 250, 250, 0.2);
+  outline: none;
+}
+
+.form-container button {
+  font-family: "Quicksand", sans-serif;
+  color: var(--branco);
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  border-radius: 12px;
+  background: var(--bege);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-container button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px var(--bege);
+}
+
+@media (max-width: 1200px) {
+  .entrar-em-contato {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .form-container {
+    padding: 32px;
+  }
+}

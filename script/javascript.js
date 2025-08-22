@@ -6,10 +6,10 @@ if (window.SimpleAnime) {
 const dot = document.getElementById("dot");
 
 let targetX = 0,
-  targetY = 0; // posição do mouse
+  targetY = 0;
 let x = 0,
-  y = 0; // posição renderizada
-const ease = 0.18; // 0.05 = mais atraso | 0.3 = mais rápido
+  y = 0;
+const ease = 0.18;
 
 window.addEventListener("mousemove", (e) => {
   targetX = e.clientX;
@@ -29,26 +29,40 @@ loop();
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");
 
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-
-  // animação sequencial dos links
+function animateLinks(open) {
   const links = navLinks.querySelectorAll("li");
   links.forEach((link, index) => {
-    if (navLinks.classList.contains("active")) {
+    if (open) {
       link.style.opacity = 0;
       setTimeout(() => {
         link.style.transition = "opacity 0.3s ease, transform 0.3s ease";
         link.style.opacity = 1;
         link.style.transform = "translateY(0)";
-      }, index * 100); // delay sequencial
+      }, index * 100);
     } else {
       link.style.opacity = "";
       link.style.transform = "";
       link.style.transition = "";
     }
   });
+}
+
+hamburger.addEventListener("click", (e) => {
+  navLinks.classList.toggle("active");
+  animateLinks(navLinks.classList.contains("active"));
+  e.stopPropagation();
 });
+
+document.addEventListener("click", (e) => {
+  const isClickInsideMenu = navLinks.contains(e.target);
+  const isClickOnHamburger = hamburger.contains(e.target);
+
+  if (!isClickInsideMenu && !isClickOnHamburger && navLinks.classList.contains("active")) {
+    navLinks.classList.remove("active");
+    animateLinks(false);
+  }
+});
+
 
 //numero aleatorios ---------------------------------
 const counters = document.querySelectorAll(".contador");
@@ -122,7 +136,6 @@ function updateSlide(index) {
     slide.classList.toggle("active", i === index);
   });
 
-  // centraliza o slide ativo
   const container = document.querySelector(".scroll-container");
   const activeSlide = slides[index];
   const containerCenter = container.offsetWidth / 2;
@@ -132,12 +145,43 @@ function updateSlide(index) {
   currentIndex = index;
 }
 
-// clique em uma slide para ativar
 slides.forEach((slide, i) => {
   slide.addEventListener("click", () => {
     updateSlide(i);
   });
 });
 
-// inicializa centralizando o primeiro slide
 updateSlide(0);
+
+function fitText(el) {
+  const parent = el.parentElement;
+  el.style.whiteSpace = 'nowrap'; // linha única
+  el.style.display = 'inline-block';
+
+  let fontSize = 10;
+  el.style.fontSize = fontSize + "px";
+
+  while (el.scrollWidth <= parent.clientWidth && fontSize < 500) {
+    fontSize++;
+    el.style.fontSize = fontSize + "px";
+  }
+
+  el.style.fontSize = (fontSize - 1) + "px";
+}
+
+const h1 = document.querySelector(".letreiro h1");
+fitText(h1);
+
+window.addEventListener("resize", () => fitText(h1));
+
+const onlyLetters = (e) => {
+    e.target.value = e.target.value.replace(/[^A-Za-zÀ-ÿ\s]/g, '');
+  }
+
+  document.getElementById('nome').addEventListener('input', onlyLetters);
+  document.getElementById('pais').addEventListener('input', onlyLetters);
+  document.getElementById('cidade').addEventListener('input', onlyLetters);
+
+  document.getElementById('telefone').addEventListener('input', (e) => {
+    e.target.value = e.target.value.replace(/\D/g, '');
+  });

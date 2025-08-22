@@ -189,8 +189,11 @@ document.getElementById("telefone").addEventListener("input", (e) => {
   e.target.value = e.target.value.replace(/\D/g, "");
 });
 
-// Esconde a tela de carregamento quando o site terminar de carregar
+
 window.addEventListener("load", () => {
   const loading = document.getElementById("loading");
-  loading.classList.add("hidden");
+
+  setTimeout(() => {
+    loading.classList.add("hidden");
+  }, 1500);
 });

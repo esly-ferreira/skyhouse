@@ -32,6 +32,7 @@ header {
   transition: background 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
   box-sizing: border-box;
   border: 1px solid transparent;
+  font-family: "Quicksand", sans-serif;
 }
 
 .nav-links li a:hover {

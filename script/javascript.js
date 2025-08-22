@@ -57,12 +57,15 @@ document.addEventListener("click", (e) => {
   const isClickInsideMenu = navLinks.contains(e.target);
   const isClickOnHamburger = hamburger.contains(e.target);
 
-  if (!isClickInsideMenu && !isClickOnHamburger && navLinks.classList.contains("active")) {
+  if (
+    !isClickInsideMenu &&
+    !isClickOnHamburger &&
+    navLinks.classList.contains("active")
+  ) {
     navLinks.classList.remove("active");
     animateLinks(false);
   }
 });
-
 
 //numero aleatorios ---------------------------------
 const counters = document.querySelectorAll(".contador");
@@ -116,17 +119,17 @@ const observer = new IntersectionObserver(
 counters.forEach((counter) => observer.observe(counter));
 
 //animção scrol ------------------------------------------------
-  const carrossel = document.querySelector('.carrossel-container');
-  const prev = document.querySelector('.prev');
-  const next = document.querySelector('.next');
+const carrossel = document.querySelector(".carrossel-container");
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
 
-  next.addEventListener('click', () => {
-    carrossel.scrollBy({ left: carrossel.clientWidth, behavior: 'smooth' });
-  });
+next.addEventListener("click", () => {
+  carrossel.scrollBy({ left: carrossel.clientWidth, behavior: "smooth" });
+});
 
-  prev.addEventListener('click', () => {
-    carrossel.scrollBy({ left: -carrossel.clientWidth, behavior: 'smooth' });
-  });
+prev.addEventListener("click", () => {
+  carrossel.scrollBy({ left: -carrossel.clientWidth, behavior: "smooth" });
+});
 
 const slides = document.querySelectorAll(".slide");
 let currentIndex = 0;
@@ -155,8 +158,8 @@ updateSlide(0);
 
 function fitText(el) {
   const parent = el.parentElement;
-  el.style.whiteSpace = 'nowrap'; // linha única
-  el.style.display = 'inline-block';
+  el.style.whiteSpace = "nowrap"; // linha única
+  el.style.display = "inline-block";
 
   let fontSize = 10;
   el.style.fontSize = fontSize + "px";
@@ -166,7 +169,7 @@ function fitText(el) {
     el.style.fontSize = fontSize + "px";
   }
 
-  el.style.fontSize = (fontSize - 1) + "px";
+  el.style.fontSize = fontSize - 1 + "px";
 }
 
 const h1 = document.querySelector(".letreiro h1");
@@ -175,13 +178,19 @@ fitText(h1);
 window.addEventListener("resize", () => fitText(h1));
 
 const onlyLetters = (e) => {
-    e.target.value = e.target.value.replace(/[^A-Za-zÀ-ÿ\s]/g, '');
-  }
+  e.target.value = e.target.value.replace(/[^A-Za-zÀ-ÿ\s]/g, "");
+};
 
-  document.getElementById('nome').addEventListener('input', onlyLetters);
-  document.getElementById('pais').addEventListener('input', onlyLetters);
-  document.getElementById('cidade').addEventListener('input', onlyLetters);
+document.getElementById("nome").addEventListener("input", onlyLetters);
+document.getElementById("pais").addEventListener("input", onlyLetters);
+document.getElementById("cidade").addEventListener("input", onlyLetters);
 
-  document.getElementById('telefone').addEventListener('input', (e) => {
-    e.target.value = e.target.value.replace(/\D/g, '');
-  });
+document.getElementById("telefone").addEventListener("input", (e) => {
+  e.target.value = e.target.value.replace(/\D/g, "");
+});
+
+// Esconde a tela de carregamento quando o site terminar de carregar
+window.addEventListener("load", () => {
+  const loading = document.getElementById("loading");
+  loading.classList.add("hidden");
+});
